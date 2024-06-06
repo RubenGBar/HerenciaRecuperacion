@@ -59,7 +59,7 @@ public class Producto implements Comparable<Producto>{
 		
 		String cad = "";
 		
-		cad += "\n----------------------------------\n";
+		cad += "----------------------------------\n";
 		cad += this.nombre + "\n";
 		cad += "Precio: " + this.precio + "\n";
 		
