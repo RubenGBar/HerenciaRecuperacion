@@ -31,7 +31,7 @@ public class Electrodomestico {
 		
 	}
 
-	public Electrodomestico(double precioBase, double peso, char color, char consumoEnergetico) {
+	public Electrodomestico(double precioBase, double peso, String color, char consumoEnergetico) {
 		
 		this(precioBase, peso);
 		
@@ -73,13 +73,13 @@ public class Electrodomestico {
 		
 	}
 	
-	private void comprobarColor(char letra) {
+	private void comprobarColor(String color) {
 		
-		String letraCad = String.valueOf(letra);
+		String colorMayusculas = color.toUpperCase();
 		
 		try {
 			
-			this.color = Color.valueOf(letraCad);
+			this.color = Color.valueOf(colorMayusculas);
 			
 		} catch (IllegalArgumentException  e) {
 			
