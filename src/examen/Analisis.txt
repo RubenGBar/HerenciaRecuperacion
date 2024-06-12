@@ -1,0 +1,31 @@
+clase Mando implements Comparable<Mando>
+	# modelo: String
+	# anchura: double
+	# altura: String
+	# precio: double 
+	# encendido: boolean
+	---------------------------
+	+ encender()
+	+ apagar()
+
+interface Volumen
+	+ subirVolumen()
+	+ bajarVolumen()
+	
+interface Velocidad
+	+ subirVelocidad
+	+ subirVelocidad
+	
+clase MandoTV extends Mando implements Volumen
+	- volumen: int
+	- canal: int
+	---------------------------
+	+ subirVolumen()
+	+ bajarVolumen()
+	+ cambiarCanal(int canal)
+	
+clase MandoMinicadenas extends Mando implements Volumen
+	- volumen: int
+	---------------------------
+	+ subirVolumen()
+	+ bajarVolumen()
