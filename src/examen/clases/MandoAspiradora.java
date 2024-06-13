@@ -6,18 +6,12 @@ public class MandoAspiradora extends Mando implements Velocidad{
 
 	private int velocidad = 0;
 	
-	public MandoAspiradora(String modelo, double altura, double anchura, double precio, int velocidad) {
+	public MandoAspiradora(String modelo, double altura, double anchura, double precio) {
 		super(modelo, altura, anchura, precio);
-		if(velocidad >= 0 && velocidad <= 3) {
-			this.velocidad = velocidad;
-		}
 	}
 
-	public MandoAspiradora(String modelo, double altura, double anchura, int velocidad) {
+	public MandoAspiradora(String modelo, double altura, double anchura) {
 		super(modelo, altura, anchura);
-		if(velocidad >= 0 && velocidad <= 3) {
-			this.velocidad = velocidad;
-		}
 	}
 	
 	public int getVelocidad() {

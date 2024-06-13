@@ -10,26 +10,12 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 	private int velocidad = 0;
 	private Modo modo = Modo.FRIO;
 	
-	public MandoAireAcondicionado(String modelo, double altura, double anchura, double precio, int temperatura, int velocidad, String modo) {
+	public MandoAireAcondicionado(String modelo, double altura, double anchura, double precio) {
 		super(modelo, altura, anchura, precio);
-		if(temperatura >= 16 && temperatura <= 32) {
-			this.temperatura = temperatura;
-		}
-		if(velocidad >= 0 && velocidad <= 5) {
-			this.velocidad = velocidad;
-		}
-		comprobarModo(modo);
 	}
 	
-	public MandoAireAcondicionado(String modelo, double altura, double anchura, int temperatura, int velocidad, String modo) {
+	public MandoAireAcondicionado(String modelo, double altura, double anchura) {
 		super(modelo, altura, anchura);
-		if(temperatura >= 16 && temperatura <= 32) {
-			this.temperatura = temperatura;
-		}
-		if(velocidad >= 0 && velocidad <= 5) {
-			this.velocidad = velocidad;
-		}
-		comprobarModo(modo);
 	}
 
 	private void comprobarModo(String modo) {

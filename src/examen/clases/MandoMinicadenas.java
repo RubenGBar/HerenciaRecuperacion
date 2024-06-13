@@ -6,18 +6,12 @@ public class MandoMinicadenas extends Mando implements Volumen{
 
 	private int volumen = 0;
 	
-	public MandoMinicadenas(String modelo, double altura, double anchura, int volumen) {
+	public MandoMinicadenas(String modelo, double altura, double anchura) {
 		super(modelo, altura, anchura);
-		if(volumen >= 0 && volumen <= 100) {
-			this.volumen = volumen;
-		}
 	}
 
-	public MandoMinicadenas(String modelo, double altura, double anchura, double precio, int volumen) {
+	public MandoMinicadenas(String modelo, double altura, double anchura, double precio) {
 		super(modelo, altura, anchura, precio);
-		if(volumen >= 0 && volumen <= 100) {
-			this.volumen = volumen;
-		}
 	}
 	
 	public int getVolumen() {

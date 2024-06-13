@@ -7,24 +7,12 @@ public class MandoTV extends Mando implements Volumen{
 	private int volumen = 0;
 	private int canal = 1;
 	
-	public MandoTV(String modelo, double altura, double anchura, int volumen, int canal) {
+	public MandoTV(String modelo, double altura, double anchura) {
 		super(modelo, altura, anchura);
-		if(volumen >= 0 && volumen <= 100) {
-			this.volumen = volumen;
-		}
-		if(canal >= 1) {
-			this.canal = canal;
-		}
 	}
 
-	public MandoTV(String modelo, double altura, double anchura, double precio, int volumen, int canal) {
+	public MandoTV(String modelo, double altura, double anchura, double precio) {
 		super(modelo, altura, anchura, precio);
-		if(volumen >= 0 && volumen <= 100) {
-			this.volumen = volumen;
-		}
-		if(canal >= 1) {
-			this.canal = canal;
-		}
 	}
 	
 	public int getVolumen() {
