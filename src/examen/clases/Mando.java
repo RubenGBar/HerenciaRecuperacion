@@ -129,7 +129,7 @@ public class Mando implements Comparable<Mando>{
 		
 		int pos = 0;
 		
-		
+		pos = this.modelo.compareToIgnoreCase(o.modelo);
 		
 		return pos;
 	}
