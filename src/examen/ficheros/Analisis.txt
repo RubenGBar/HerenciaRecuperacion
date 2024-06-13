@@ -1,0 +1,78 @@
+clase Mando implements Comparable<Mando>
+	# modelo: String
+	# anchura: double
+	# altura: double
+	# precio: double 
+	# encendido: boolean
+	---------------------------
+	+ Mando(String modelo, double anchura, double altura, double precio)
+	+ getModelo(): String
+	+ getAnchura(): double
+	+ getAltura(): double
+	+ setPrecio()
+	+ getPrecio(): double
+	+ setEncendido()
+	+ isEncendido(): boolean
+	+ encender()
+	+ apagar()
+	+ equals(): boolean
+	+ toString(): String
+	+ compareTo(): int
+
+interface Volumen
+	+ subirVolumen()
+	+ bajarVolumen()
+	
+interface Velocidad
+	+ subirVelocidad
+	+ subirVelocidad
+	
+clase MandoTV extends Mando implements Volumen
+	- volumen: int
+	- canal: int
+	---------------------------
+	+ MandoTV(String modelo, double anchura, double altura, double precio)
+	+ subirVolumen()
+	+ bajarVolumen()
+	+ cambiarCanal(int canal)
+	+ getVolumen(): int
+	+ setCanal()
+	+ getCanal(): int
+	+ equals(): boolean
+	+ toString(): String
+	
+clase MandoMinicadenas extends Mando implements Volumen
+	- volumen: int
+	---------------------------
+	+ MandoMinicadenas(String modelo, double anchura, double altura, double precio)
+	+ subirVolumen()
+	+ bajarVolumen()
+	+ getVolumen(): int
+	+ equals(): boolean
+	+ toString(): String
+	
+clase MandoAspiradora extends Mando implements Velocidad
+	- velocidad: int (= 0)(max 3)
+	---------------------------
+	+ MandoAspiradora(String modelo, double anchura, double altura, double precio)
+	+ subirVelocidad()
+	+ bajarVelocidad()
+	+ getVelocidad(): int
+	+ equals(): boolean
+	+ toString(): String
+	
+clase MandoAireAcondicionado extends Mando implements Velocidad
+	- enum modo {FRIO, CALOR} (= FRIO)
+	- temperatura: int
+	- velocidad: int (= 0) (max 5)
+	---------------------------
+	+ MandoAireAcondicionado(String modelo, double anchura, double altura, double precio)
+	+ subirVelocidad()
+	+ bajarVelocidad()
+	+ setModo()
+	+ getModo(): String
+	+ setTemperatura()
+	+ getTemperatura(): int
+	+ getVelocidad(): int
+	+ equals(): boolean
+	+ toString(): String

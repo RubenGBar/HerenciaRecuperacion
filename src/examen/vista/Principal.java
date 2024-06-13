@@ -1,4 +1,4 @@
-package examen;
+package examen.vista;
 
 public class Principal {
 
