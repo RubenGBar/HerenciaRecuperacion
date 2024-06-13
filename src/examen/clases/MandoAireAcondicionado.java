@@ -18,6 +18,31 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 		super(modelo, altura, anchura);
 	}
 
+	
+	public int getTemperatura() {
+		return temperatura;
+	}
+
+	public void setTemperatura(int temperatura) {
+		if(temperatura >= 16 && temperatura <= 32) {
+			this.temperatura = temperatura;
+		}
+	}
+	
+	public String getModo() {
+		return String.valueOf(this.modo);
+	}
+	
+	public void setModo(String modo) {
+		
+		comprobarModo(modo);
+		
+	}
+	
+	public int getVelocidad() {
+		return velocidad;
+	}
+	
 	private void comprobarModo(String modo) {
 		
 		String modoMayusculas = modo.toUpperCase();
@@ -33,31 +58,20 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 		}
 		
 	}
-	
-	public int getTemperatura() {
-		return temperatura;
-	}
 
-	public void setTemperatura(int temperatura) {
-		if(temperatura >= 16 && temperatura <= 32) {
-			this.temperatura = temperatura;
+	public void cambiarModo() {
+		
+		if(modo.equals(Modo.valueOf("FRIO"))) {
+			
+			this.modo = Modo.CALOR;
+			
+		} else if(modo.equals(Modo.valueOf("CALOR"))){
+			
+			this.modo = Modo.FRIO;
+			
 		}
-	}
-
-	public String getModo() {
-		return String.valueOf(this.modo);
-	}
-
-	public void setModo(String modo) {
-		
-		comprobarModo(modo);
 		
 	}
-
-	public int getVelocidad() {
-		return velocidad;
-	}
-
 	@Override
 	public boolean subirVelocidad() {
 		

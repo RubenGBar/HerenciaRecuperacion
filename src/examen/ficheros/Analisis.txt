@@ -70,6 +70,7 @@ clase MandoAireAcondicionado extends Mando implements Velocidad
 	+ MandoAireAcondicionado(String modelo, double anchura, double altura, double precio)
 	+ MandoAireAcondicionado(String modelo, double anchura, double altura)
 	- comprobarModo(String modo)
+	+ cambiarModo()
 	+ subirVelocidad()
 	+ bajarVelocidad()
 	+ setModo()
