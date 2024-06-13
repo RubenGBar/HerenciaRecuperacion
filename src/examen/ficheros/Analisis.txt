@@ -6,6 +6,7 @@ clase Mando implements Comparable<Mando>
 	# encendido: boolean
 	---------------------------
 	+ Mando(String modelo, double anchura, double altura, double precio)
+	+ Mando(String modelo, double anchura, double altura)
 	+ getModelo(): String
 	+ getAnchura(): double
 	+ getAltura(): double
@@ -32,33 +33,33 @@ clase MandoTV extends Mando implements Volumen
 	- canal: int
 	---------------------------
 	+ MandoTV(String modelo, double anchura, double altura, double precio)
+	+ MandoTV(String modelo, double anchura, double altura)
 	+ subirVolumen()
 	+ bajarVolumen()
-	+ cambiarCanal(int canal)
+	+ subirCanal()
+	+ bajarCanal()
 	+ getVolumen(): int
-	+ setCanal()
 	+ getCanal(): int
-	+ equals(): boolean
 	+ toString(): String
 	
 clase MandoMinicadenas extends Mando implements Volumen
 	- volumen: int
 	---------------------------
 	+ MandoMinicadenas(String modelo, double anchura, double altura, double precio)
+	+ MandoMinicadenas(String modelo, double anchura, double altura)
 	+ subirVolumen()
 	+ bajarVolumen()
 	+ getVolumen(): int
-	+ equals(): boolean
 	+ toString(): String
 	
 clase MandoAspiradora extends Mando implements Velocidad
 	- velocidad: int (= 0)(max 3)
 	---------------------------
 	+ MandoAspiradora(String modelo, double anchura, double altura, double precio)
+	+ MandoAspiradora(String modelo, double anchura, double altura)
 	+ subirVelocidad()
 	+ bajarVelocidad()
 	+ getVelocidad(): int
-	+ equals(): boolean
 	+ toString(): String
 	
 clase MandoAireAcondicionado extends Mando implements Velocidad
@@ -67,6 +68,8 @@ clase MandoAireAcondicionado extends Mando implements Velocidad
 	- velocidad: int (= 0) (max 5)
 	---------------------------
 	+ MandoAireAcondicionado(String modelo, double anchura, double altura, double precio)
+	+ MandoAireAcondicionado(String modelo, double anchura, double altura)
+	- comprobarModo(String modo)
 	+ subirVelocidad()
 	+ bajarVelocidad()
 	+ setModo()
@@ -74,5 +77,4 @@ clase MandoAireAcondicionado extends Mando implements Velocidad
 	+ setTemperatura()
 	+ getTemperatura(): int
 	+ getVelocidad(): int
-	+ equals(): boolean
 	+ toString(): String

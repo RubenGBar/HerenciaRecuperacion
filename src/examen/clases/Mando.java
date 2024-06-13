@@ -2,17 +2,13 @@ package examen.clases;
 
 public class Mando implements Comparable<Mando>{
 
-	public String modelo = "";
-	
-	public double altura = 0;
-	
-	public double anchura = 0;
-	
-	public double precio = 0;
-	
-	public boolean encendido = false;
+	protected String modelo = "";
+	protected double altura = 0;
+	protected double anchura = 0;
+	protected double precio = 0;
+	protected boolean encendido = false;
 
-	public Mando(String modelo, double altura, double anchura, double precio, boolean encendido) {
+	public Mando(String modelo, double altura, double anchura, double precio) {
 		
 		if(modelo != null && !modelo.equals("")) {
 			this.modelo = modelo;
@@ -26,12 +22,23 @@ public class Mando implements Comparable<Mando>{
 		if(precio > 0) {
 			this.precio = precio;
 		}
-		if(encendido) {
-			this.encendido = encendido;
-		}
 		
 	}
 
+	public Mando(String modelo, double altura, double anchura) {
+		
+		if(modelo != null && !modelo.equals("")) {
+			this.modelo = modelo;
+		}
+		if(altura > 0) {
+			this.altura = altura;
+		}
+		if(anchura > 0) {
+			this.anchura = anchura;
+		}
+		
+	}
+	
 	public double getPrecio() {
 		return precio;
 	}
@@ -110,16 +117,8 @@ public class Mando implements Comparable<Mando>{
 		cad += "Anchura: " + this.anchura + "\n";
 		cad += "Altura: " + this.altura + "\n";
 		cad += "Precio: " + this.precio + "\n";
-		cad += "Encendido: ";
-		if(this.encendido) {
-			
-			cad += "Sí\n";
-			
-		} else {
-			
-			cad += "No\n";
-			
-		}
+		cad += encendido ? "ON\n" : "OFF\n";
+		cad += "---------------------------------------------";
 		
 		return cad;
 	}
