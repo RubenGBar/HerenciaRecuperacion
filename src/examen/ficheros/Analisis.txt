@@ -73,7 +73,6 @@ clase MandoAireAcondicionado extends Mando implements Velocidad
 	+ cambiarModo()
 	+ subirVelocidad()
 	+ bajarVelocidad()
-	+ setModo()
 	+ getModo(): String
 	+ setTemperatura()
 	+ getTemperatura(): int

@@ -2,15 +2,15 @@ package examen.clases;
 
 import examen.interfaces.Volumen;
 
-public class MandoMinicadenas extends Mando implements Volumen{
+public class MandoMinicadena extends Mando implements Volumen{
 
 	private int volumen = 0;
 	
-	public MandoMinicadenas(String modelo, double altura, double anchura) {
+	public MandoMinicadena(String modelo, double altura, double anchura) {
 		super(modelo, altura, anchura);
 	}
 
-	public MandoMinicadenas(String modelo, double altura, double anchura, double precio) {
+	public MandoMinicadena(String modelo, double altura, double anchura, double precio) {
 		super(modelo, altura, anchura, precio);
 	}
 	
@@ -55,16 +55,16 @@ public class MandoMinicadenas extends Mando implements Volumen{
 	@Override
 	public String toString() {
 		
-		String cad = "";
+		String cad = "\n";
 		
 		cad += "MandoMinicadenas\n";
 		cad += "Modelo: " + this.modelo + "\n";
 		cad += "Anchura: " + this.anchura + "\n";
 		cad += "Altura: " + this.altura + "\n";
 		cad += "Precio: " + this.precio + "\n";
-		cad += "Volúmen: " + this.volumen + "\n";
+		cad += "Volï¿½men: " + this.volumen + "\n";
 		cad += encendido ? "ON\n" : "OFF\n";
-		cad += "---------------------------------------------";
+		cad += "---------------------------------------------\n";
 		
 		return cad;
 	}

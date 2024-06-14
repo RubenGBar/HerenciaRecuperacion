@@ -53,7 +53,7 @@ public class MandoAspiradora extends Mando implements Velocidad{
 	@Override
 	public String toString() {
 		
-		String cad = "";
+		String cad = "\n";
 		
 		cad += "MandoAspiradora\n";
 		cad += "Modelo: " + this.modelo + "\n";
@@ -62,7 +62,7 @@ public class MandoAspiradora extends Mando implements Velocidad{
 		cad += "Precio: " + this.precio + "\n";
 		cad += "Velocidad: " + this.velocidad + "\n";
 		cad += encendido ? "ON\n" : "OFF\n";
-		cad += "---------------------------------------------";
+		cad += "---------------------------------------------\n";
 		
 		return cad;
 	}

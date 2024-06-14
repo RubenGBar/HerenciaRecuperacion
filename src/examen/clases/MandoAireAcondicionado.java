@@ -33,30 +33,8 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 		return String.valueOf(this.modo);
 	}
 	
-	public void setModo(String modo) {
-		
-		comprobarModo(modo);
-		
-	}
-	
 	public int getVelocidad() {
 		return velocidad;
-	}
-	
-	private void comprobarModo(String modo) {
-		
-		String modoMayusculas = modo.toUpperCase();
-		
-		try {
-			
-			this.modo = Modo.valueOf(modoMayusculas);
-			
-		}catch(IllegalArgumentException e) {
-			
-			this.modo = Modo.FRIO;
-			
-		}
-		
 	}
 
 	public void cambiarModo() {
@@ -72,6 +50,7 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 		}
 		
 	}
+	
 	@Override
 	public boolean subirVelocidad() {
 		
@@ -107,7 +86,7 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 	@Override
 	public String toString() {
 		
-		String cad = "";
+		String cad = "\n";
 		
 		cad += "MandoAireAcondicionado\n";
 		cad += "Modelo: " + this.modelo + "\n";
@@ -118,7 +97,7 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 		cad += "Velocidad: " + this.velocidad + "\n";
 		cad += "Modo: " + String.valueOf(this.modo) + "\n";
 		cad += encendido ? "ON\n" : "OFF\n";
-		cad += "---------------------------------------------";
+		cad += "---------------------------------------------\n";
 		
 		return cad;
 	}

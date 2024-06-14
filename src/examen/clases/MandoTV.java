@@ -73,7 +73,7 @@ public class MandoTV extends Mando implements Volumen{
 	@Override
 	public String toString() {
 		
-		String cad = "";
+		String cad = "\n";
 		
 		cad += "MandoTV\n";
 		cad += "Modelo: " + this.modelo + "\n";
@@ -83,7 +83,7 @@ public class MandoTV extends Mando implements Volumen{
 		cad += "Volumen: " + this.volumen + "\n";
 		cad += "Canal: " + this.canal + "\n";
 		cad += encendido ? "ON\n" : "OFF\n";
-		cad += "---------------------------------------------";
+		cad += "---------------------------------------------\n";
 		
 		return cad;
 	}

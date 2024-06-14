@@ -110,7 +110,7 @@ public class Mando implements Comparable<Mando>{
 	@Override
 	public String toString() {
 		
-		String cad = "";
+		String cad = "\n";
 		
 		cad += "Mando\n";
 		cad += "Modelo: " + this.modelo + "\n";
@@ -118,7 +118,7 @@ public class Mando implements Comparable<Mando>{
 		cad += "Altura: " + this.altura + "\n";
 		cad += "Precio: " + this.precio + "\n";
 		cad += encendido ? "ON\n" : "OFF\n";
-		cad += "---------------------------------------------";
+		cad += "---------------------------------------------\n";
 		
 		return cad;
 	}
