@@ -62,7 +62,7 @@ public class MandoMinicadena extends Mando implements Volumen{
 		cad += "Anchura: " + this.anchura + "\n";
 		cad += "Altura: " + this.altura + "\n";
 		cad += "Precio: " + this.precio + "\n";
-		cad += "Vol�men: " + this.volumen + "\n";
+		cad += "Volumen: " + this.volumen + "\n";
 		cad += encendido ? "ON\n" : "OFF\n";
 		cad += "---------------------------------------------\n";
 		

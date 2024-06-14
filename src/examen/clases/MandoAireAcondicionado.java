@@ -39,11 +39,11 @@ public class MandoAireAcondicionado extends Mando implements Velocidad{
 
 	public void cambiarModo() {
 		
-		if(modo == Modo.FRIO) {
+		if(this.modo == Modo.FRIO) {
 			
 			this.modo = Modo.CALOR;
 			
-		} else if(modo == Modo.CALOR){
+		} else if(this.modo == Modo.CALOR){
 			
 			this.modo = Modo.FRIO;
 			
